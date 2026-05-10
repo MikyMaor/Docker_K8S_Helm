@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# Local secrets / env files (DO NOT COMMIT)
+.env
+.env.*
+helmchart/values.secrets.yaml
+helmchart/values.local.yaml
+**/*secrets*.yaml
+
+# Helm build artifacts
+charts/*.tgz
+*.tgz
+
+# IDE
+.vscode/
+.idea/
+
+
