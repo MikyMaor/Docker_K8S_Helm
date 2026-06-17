@@ -1,6 +1,22 @@
 # 🚀 Flask AWS Monitor (Docker + Kubernetes + Helm)
 
-A small Flask app with a simple dashboard UI that helps you verify a full DevOps flow:
+## Final exam status (local workspace)
+
+| Component | Status |
+|-----------|--------|
+| `app.py` — AWS boto3 monitor (VPC/LB/AMI bug fixed) | ✅ Done |
+| `requirements.txt` — flask + boto3 | ✅ Done |
+| `Dockerfile` | ✅ Done (single-stage) |
+| `Jenkinsfile` — parallel lint/security + build/push | ✅ Done (update repo URL if using new repo) |
+| `helmchart/` | ✅ Done |
+| Azure DevOps pipeline YAML | ❌ Not yet (bonus) |
+| Git Flow branches (`dev`, feature branches) | ❌ You need to create on GitHub |
+| Push to Docker Hub + screenshots | ❌ Run manually |
+| ArgoCD GitOps repo | 📁 Created locally under `../GitOps` — push to new GitHub repo |
+
+---
+
+A small Flask app that lists AWS resources (EC2, VPCs, Load Balancers, AMIs) and supports a full DevOps flow:
 
 - 🐳 Build a Docker image
 - ☸️ Deploy to Kubernetes using Helm
@@ -8,9 +24,8 @@ A small Flask app with a simple dashboard UI that helps you verify a full DevOps
 
 The app exposes:
 
-- 🌐 `GET /` – a small GUI dashboard (runtime + AWS env var status)
+- 🌐 `GET /` – AWS resources tables (EC2, VPCs, Load Balancers, AMIs)
 - 🩺 `GET /healthz` – health endpoint used by Kubernetes probes
-- 🔎 `GET /api/status` – JSON status endpoint
 
 > Port: **5001**
 
