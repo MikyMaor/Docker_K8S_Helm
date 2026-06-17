@@ -10,9 +10,9 @@
 | `Jenkinsfile` — parallel lint/security + build/push | ✅ Done (update repo URL if using new repo) |
 | `helmchart/` | ✅ Done |
 | Azure DevOps pipeline YAML | ❌ Not yet (bonus) |
-| Git Flow branches (`dev`, feature branches) | ❌ You need to create on GitHub |
+| Git Flow branches (`dev`, feature branches) | ✅ Done |
 | Push to Docker Hub + screenshots | ❌ Run manually |
-| ArgoCD GitOps repo | 📁 Created locally under `../GitOps` — push to new GitHub repo |
+| ArgoCD GitOps repo | ✅ `MikyMaor/DevOps-GitOps` |
 
 ---
 
