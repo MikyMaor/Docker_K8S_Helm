@@ -7,12 +7,27 @@
 | `app.py` — AWS boto3 monitor (VPC/LB/AMI bug fixed) | ✅ Done |
 | `requirements.txt` — flask + boto3 | ✅ Done |
 | `Dockerfile` | ✅ Done (single-stage) |
-| `Jenkinsfile` — parallel lint/security + build/push | ✅ Done (update repo URL if using new repo) |
+| `Jenkinsfile` — lint/security + Docker Hub + **GitOps push** | ✅ Done |
 | `helmchart/` | ✅ Done |
+| Local Jenkins (`jenkins/docker-compose.yml`) | ✅ Ready to run |
 | Azure DevOps pipeline YAML | ❌ Not yet (bonus) |
 | Git Flow branches (`dev`, feature branches) | ✅ Done |
-| Push to Docker Hub + screenshots | ❌ Run manually |
+| Run Jenkins pipeline + screenshots | ❌ You run locally |
 | ArgoCD GitOps repo | ✅ `MikyMaor/DevOps-GitOps` |
+| Terraform / AWS EC2 | ⏸️ Skipped (not required for current submission focus) |
+
+## CI/CD workflow (what the project is about)
+
+```text
+Code push → Jenkins
+              ├─ docker build
+              ├─ docker push  → Docker Hub (miky97/flask-aws-monitor)
+              └─ update tag + helm template → GitOps repo (DevOps-GitOps)
+                                                    ↓
+                                              ArgoCD sync → Kubernetes
+```
+
+See `jenkins/README.md` for local Jenkins setup (no AWS needed).
 
 ---
 
