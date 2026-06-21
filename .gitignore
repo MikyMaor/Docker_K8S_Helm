@@ -24,7 +24,6 @@ env/
 .env.*
 helmchart/values.secrets.yaml
 helmchart/values.local.yaml
-**/*secrets*.yaml
 
 # Helm build artifacts
 charts/*.tgz

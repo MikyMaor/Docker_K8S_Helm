@@ -12,10 +12,8 @@ ingress:
   tls: []
 
 image:
-  # Must be a Docker Hub (or other registry) image reference, e.g. "myuser/flask-aws-monitor"
   repository: miky97/flask-aws-monitor
   tag: latest
-  # "pull latest unless specified otherwise"
   pullPolicy: Always
 
 service:
